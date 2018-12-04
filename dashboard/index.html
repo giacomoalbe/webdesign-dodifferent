@@ -1,269 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
     <title>MyExpense | Dashboard</title>
-  </head>
-  <body>
-    <nav class="navbar navbar-collapse-md navbar-expand-lg navbar-dark bg-primary p-lg-0 text-white">
-      <div class="container">
-        <a href="#" class="navbar-brand">MyExpense</a>
-        <button 
-          class="navbar-toggler"
-          type="button" 
-          data-toggle="collapse" 
-          data-target="#navbarCollapse">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div
-          class="collapse navbar-collapse" 
-          id="navbarCollapse">
-          <ul class="navbar-nav mt-md-2 mt-lg-0">
-            <li class="nav-item active">
-              <a href="#" class="nav-link">
-                Dashboard
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">
-                Utenti
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">
-                Categorie
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">
-                Spese
-              </a>
-            </li>
-          </ul>
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a href="#" class="nav-link">Welcome, Utente</a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">Logout</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <header class="bg-secondary text-white">
-      <div class="container d-md-flex align-items-center py-4">
-        <div class="flex-md-grow-1">
-          <h1 class="m-0 d-flex align-items-center">
-            <i class="fas fa-cog mr-2"></i>
-            Dashboard
-            <!-- <small>Gestisci le tue spese</small> -->
-          </h1>
-        </div>
-        <div>
-          <div class="dropdown">
-            <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">Aggiungi Contenuto</button>
-            <div class="dropdown-menu">
-              <a href="#" class="dropdown-item">
-                <i class="fas fa-user"></i>
-                Aggiungi Utente
-              </a>
-              <a href="#" class="dropdown-item">
-                <i class="fas fa-list-ul"></i>
-                Aggiungi Categoria
-              </a>
-              <a href="#" class="dropdown-item">
-                <i class="fas fa-euro-sign"></i>
-                Aggiungi Spesa
-              </a>
+</head>
+<body>
+
+    <nav class="navbar navbar-collapse-md navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a href="#" class="navbar-brand">MyExpense</a>
+            <button 
+                class="navbar-toggler"
+                type="button" 
+                data-toggle="collapse" 
+                data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div
+                class="collapse navbar-collapse" 
+                id="navbarCollapse">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a href="#" class="nav-link">
+                            Dashboard
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            Utenti
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            Categorie
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            Spese
+                        </a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a href="#" class="nav-link">Welcome, Utente</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Logout</a>
+                    </li>
+                </ul>
             </div>
-          </div>
         </div>
-      </div>
+    </nav>
+    <header class="bg-secondary">
+        <div class="container d-md-flex align-items-center py-4">
+            <div class="flex-md-grow-1">
+                    <h1 class="m-0 d-flex align-items-center">
+                        <i class="fas fa-cog mr-2"></i>
+                        Dashboard
+                        <!-- <small>Gestisci le tue spese</small> -->
+                    </h1>
+            </div>
+            <div>
+                <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Aggiungi Contenuto</button>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-item">
+                            <i class="fas fa-user mr-1"></i>
+                            Aggiungi Utente
+                        </div>
+                        <div class="dropdown-item">
+                            <i class="fas fa-list-ul mr-1"></i>
+                            Aggiungi Categoria
+                        </div>
+                        <div class="dropdown-item">
+                            <i class="fas fa-euro-sign mr-1"></i>
+                            Aggiungi Spesa
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </header>
     <div class="container">
-      <div class="row">
-        <div class="col">
-          <ol class="breadcrumb my-3">
-            <li class="breadcrumb-item active">
-              <a href="#">Dashboard</a>
-            </li>
-          </ol>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-3 mb-3">
-          <div class="card">
-            <div class="list-group list-group-flush">
-              <a href="#" class="list-group-item list-group-item-action d-flex align-items-center active">
-                <i class="fas fa-cog"></i>
-                Dashboard
-                <span class="badge badge-pill badge-secondary mr-2 ml-auto">31</span>
-              </a>
-              <a href="#" class="list-group-item list-group-item-action d-flex align-items-center">
-                <i class="fas fa-user"></i>
-                Utenti
-                <span class="badge badge-pill badge-secondary mr-2 ml-auto">31</span>
-              </a>
-              <a href="#" class="list-group-item list-group-item-action d-flex align-items-center">
-                <i class="fas fa-list-ul"></i>
-                Categorie
-                <span class="badge badge-pill badge-secondary mr-2 ml-auto">7</span>
-              </a>
-              <a href="#" class="list-group-item list-group-item-action d-flex align-items-center">
-                <i class="fas fa-euro-sign"></i>
-                Spese
-                <span class="badge badge-pill badge-secondary mr-2 ml-auto">10</span>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-9">
-          <div class="row mb-3">
+        <div class="row">
             <div class="col">
-              <div class="card">
-                <div class="card-header bg-primary text-white">
-                  Statistiche
-                </div>
-                <div class="card-body row">
-                  <div class="col">
-                    <div class="card bg-success border-success text-white text-center col-12">
-                      <div class="card-body">
-                        <h2>
-                          <i class="fas fa-user mr-2"></i>
-                          34
-                        </h2>
-                        <h4>Utenti</h4>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="card bg-danger border-danger text-white text-center col-12">
-                      <div class="card-body">
-                        <h2>
-                          <i class="fas fa-list-ul mr-2"></i>
-                          40
-                        </h2>
-                        <h4>Categorie</h4>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="card bg-warning border-warning text-white text-center col-12">
-                      <div class="card-body">
-                        <h2>
-                          <i class="fas fa-euro-sign mr-2"></i>
-                          56
-                        </h2>
-                        <h4>Spese</h4>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+                <ol class="breadcrumb my-3">
+                    <li class="breadcrumb-item active">
+                        <a href="#">Dashboard</a>
+                    </li>
+                </ol>
             </div>
-          </div>
-          <div class="row mb-3">
-            <div class="col">
-              <div class="card">
-                <div class="card-header bg-primary text-white">Riepilogo Utenti</div>
-                <div class="card-body">
-                  <table class="table table-striped table-hover">
-                    <thead class="bg-primary text-white">
-                      <tr>
-                        <th></th>
-                        <th>Utente</th>
-                        <th class="text-center">Categorie</th>
-                        <th class="text-center">Spese</th>
-                        <th class="text-center">Bilancio</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>
-                          <div 
-                            class="avatar tiny">
-                            <i class="fas fa-user text-white"></i>
-                          </div>
-                        </td>
-                        <td class="align-middle">
-                          Giacomo Alberini
-                        </td>
-                        <td class="align-middle text-center">
-                          <span class="badge badge-pill badge-danger">10</span>
-                        </td>
-                        <td class="align-middle text-center">
-                          <span class="badge badge-pill badge-warning text-white">10</span>
-                        </td>
-                        <td class="align-middle text-center">
-                          <span class="text-danger font-weight-bold">
-                            - 150 €
-                          </span>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div 
-                            class="avatar tiny">
-                            <i class="fas fa-user text-white"></i>
-                          </div>
-                        </td>
-                        <td class="align-middle">
-                          Giacomo Alberini
-                        </td>
-                        <td class="align-middle text-center">
-                          <span class="badge badge-pill badge-danger">10</span>
-                        </td>
-                        <td class="align-middle text-center">
-                          <span class="badge badge-pill badge-warning text-white">10</span>
-                        </td>
-                        <td class="align-middle text-center">
-                          <span class="text-success font-weight-bold">
-                            + 300 €
-                          </span>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div 
-                            class="avatar tiny">
-                            <i class="fas fa-user text-white"></i>
-                          </div>
-                        </td>
-                        <td class="align-middle">
-                          Giacomo Alberini
-                        </td>
-                        <td class="align-middle text-center">
-                          <span class="badge badge-pill badge-danger">10</span>
-                        </td>
-                        <td class="align-middle text-center">
-                          <span class="badge badge-pill badge-warning text-white">10</span>
-                        </td>
-                        <td class="align-middle text-center">
-                          <span class="text-success font-weight-bold">
-                            + 300 €
-                          </span>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
+        <div class="row">
+            <div class="col-md-3 bg-danger">
+                Ciao
+            </div>
+            <div class="flex-grow-1 bg-primary">
+                Bello
+            </div>
+        </div>
     </div>
-    <footer id="footer" class="bg-dark justify-content-center p-3 text-white d-flex align-items-center">
-      <p class="m-0">Copyleft &copy; Giacomo Alberini - Corso Programmazione Web</p>
-    </footer>
+
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-  </body>
+</body>
 </html>
