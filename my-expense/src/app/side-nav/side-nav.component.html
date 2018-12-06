@@ -1,0 +1,25 @@
+<div class="card">
+  <div class="list-group list-group-flush">
+    <div class="list-group-item" [class.active]="currentUrl == 'dashboard'">
+      <i class="fas fa-cog mr-1"></i>
+      Dashboard
+    </div>
+    <div class="list-group-item d-flex align-items-center" [class.active] = "currentUrl == 'users'">
+      <i class="fas fa-user mr-2"></i>
+      Utenti
+      <span class="badge badge-pill badge-primary ml-auto">10</span>
+    </div>
+    <div class="list-group-item d-flex align-items-center"
+         [class.active] = "currentUrl == 'categories'">
+      <i class="fas fa-list-ul mr-2"></i>
+      Categorie
+      <span class="badge badge-pill badge-primary ml-auto">10</span>
+    </div>
+    <div class="list-group-item d-flex align-items-center"
+         [class.active] = "currentUrl == 'expenses'">
+      <i class="fab fa-bitcoin mr-2"></i>
+      Spese
+      <span class="badge badge-pill badge-primary ml-auto">10</span>
+    </div>
+  </div>
+</div>
