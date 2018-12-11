@@ -1,0 +1,28 @@
+  <div id="header" class="bg-dark text-white mb-3">
+    <div class="container">
+      <div class="row py-4">
+        <div class="col d-flex align-items-center">
+          <h2 class="m-0">
+            <i [class]="currentHeader.iconClass"></i>
+            {{ currentHeader.displayName }}
+          </h2>
+        </div>
+        <div class="col flex-grow-0">
+          <div class="dropdown">
+            <button
+              class="btn btn-white dropdown-toggle"
+              data-toggle="dropdown">
+              {{ currentHeader.actionsPlaceholder }}
+            </button>
+            <div class="dropdown-menu">
+              <li
+                *ngFor="let action of currentHeader.actions"
+                class="dropdown-item">
+                {{ action.displayName }}
+              </li>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

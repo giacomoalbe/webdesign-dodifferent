@@ -1,0 +1,16 @@
+session_name: FRONTENDWEB
+start_directory: ./
+windows:
+  - window_name: Code
+    panes:
+      - shell_command:
+        - cd app/src
+        - vim
+  - window_name: CLI
+    panes:
+      - shell_command:
+        - clear
+  - window_name: Server
+    panes:
+      - shell_command:
+        - ng serve

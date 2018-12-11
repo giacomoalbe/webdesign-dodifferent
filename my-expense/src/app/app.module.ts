@@ -2,13 +2,17 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { UserComponent } from './user/user.component';
-import { ExpenseComponent } from './expense/expense.component';
-import { CategoryComponent } from './category/category.component';
-import { NavigationComponent } from './navigation/navigation.component';
-import { SideNavComponent } from './side-nav/side-nav.component';
+import { AppComponent } from './components/app/app.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { UserComponent } from './components/user/user.component';
+import { ExpenseComponent } from './components/expense/expense.component';
+import { CategoryComponent } from './components/category/category.component';
+import { NavigationComponent } from './components/navigation/navigation.component';
+import { SideNavComponent } from './components/side-nav/side-nav.component';
+
+import { RoutesService } from './services/routes.service';
+import { HeaderComponent } from './components/header/header.component';
+import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.component';
 
 @NgModule({
   declarations: [
@@ -18,13 +22,17 @@ import { SideNavComponent } from './side-nav/side-nav.component';
     ExpenseComponent,
     CategoryComponent,
     NavigationComponent,
-    SideNavComponent
+    SideNavComponent,
+    HeaderComponent,
+    BreadcrumbComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    RoutesService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

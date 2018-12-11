@@ -1,0 +1,19 @@
+<div class="card">
+  <div class="list-group list-group-flush">
+    <div
+      *ngFor="let item of navItems"
+      class="list-group-item d-flex align-items-center"
+      (click)="itemClicked(item)"
+      [class.active]="currentUrl == item.urlName">
+      <i
+        [class]="item.iconClass"
+        class="mr-1"></i>
+      {{ item.name }}
+      <span
+        *ngIf="item.badgeCount != null"
+        class="badge badge-pill badge-primary ml-auto">
+        {{ item.badgeCount }}
+      </span>
+    </div>
+  </div>
+</div>

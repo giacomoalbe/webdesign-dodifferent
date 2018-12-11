@@ -1,3 +1,38 @@
 @import "variables";
 @import "~bootstrap/scss/bootstrap";
-//@import "~fontawesome/fontawesome-free-regular/scss/font-awesome";
+@import "~font-awesome/scss/font-awesome";
+
+@each $color, $value in $theme-colors {
+  .active .badge-#{$color} {
+    color: #{$value};
+    background-color: white;
+  }
+}
+
+.list-group-item {
+  cursor: pointer;
+}
+
+.list-group-item i {
+  margin-right: #{$spacer};
+  width: 15px;
+  height: 15px;
+  line-height: 15px;
+  font-size: 15px;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+//@each $color, $value in $theme-colors {
+  //.list-group-item.active .badge-#{$color} {
+    //background-color: white;
+    //color: $value;
+//}
