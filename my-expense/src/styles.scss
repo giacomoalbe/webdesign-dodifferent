@@ -2,6 +2,7 @@
 @import "~bootstrap/scss/bootstrap";
 @import "~font-awesome/scss/font-awesome";
 
+
 @each $color, $value in $theme-colors {
   .active .badge-#{$color} {
     color: #{$value};
@@ -21,15 +22,6 @@
   font-size: 15px;
   text-align: center;
 }
-
-
-
-
-
-
-
-
-
 
 //@each $color, $value in $theme-colors {
   //.list-group-item.active .badge-#{$color} {

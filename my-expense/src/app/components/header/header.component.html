@@ -1,5 +1,5 @@
   <div id="header" class="bg-dark text-white mb-3">
-    <div class="container">
+    <div class="container" *ngIf="currentHeader">
       <div class="row py-4">
         <div class="col d-flex align-items-center">
           <h2 class="m-0">
@@ -17,6 +17,7 @@
             <div class="dropdown-menu">
               <li
                 *ngFor="let action of currentHeader.actions"
+                (click)="doAction(action)"
                 class="dropdown-item">
                 {{ action.displayName }}
               </li>

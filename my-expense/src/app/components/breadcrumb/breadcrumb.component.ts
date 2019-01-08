@@ -16,7 +16,7 @@ export class BreadcrumbComponent implements OnInit {
       .subscribe((evt) => {
 
         if (evt instanceof NavigationEnd) {
-          this.mainRoute = evt.url.replace("/", "");
+          this.mainRoute = evt.url.replace("/", "") || "dashboard";
         }
       });
   }

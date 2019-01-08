@@ -63,11 +63,16 @@ export class HeaderComponent implements OnInit {
     this.router.events
       .subscribe((evt) => {
         if (evt instanceof NavigationEnd) {
-          this.currentHeader = this.headerItems[evt.url.replace("/", "")];
+          let url = evt.url.replace("/", "") || "dashboard";
+
+          this.currentHeader = this.headerItems[url];
         }
       });
   }
 
+  doAction(action) {
+    console.log(action);
+  }
 
   ngOnInit() {
   }

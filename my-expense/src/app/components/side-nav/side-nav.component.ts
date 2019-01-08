@@ -41,7 +41,7 @@ export class SideNavComponent implements OnInit {
     this.router.events
       .subscribe((evt) => {
         if (evt instanceof NavigationEnd) {
-          this.currentUrl = evt.url.replace("/", "");
+          this.currentUrl = evt.url.replace("/", "") || "dashboard";
         }
       });
   }
